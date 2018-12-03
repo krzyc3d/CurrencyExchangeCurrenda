@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CurrencyExchangeNBP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div style="margin-left: 400px">
+        <label for="currency">Choose currency:</label>
+        <select id="currency">
+            <option value="EUR" selected>EUR</option>
+            <option value="USD">USD</option>
+            <option value="CHF">CHF</option>
+            <option value="GBP">GBP</option>
+        </select>
+    </div>
+    <div style="margin-left: 400px">
+     <form class="form-inline" th:action="@{/currency}" >
+
+         <label for=>Start</label>
+         <input type="date" name="start">
+         <label >End</label>
+         <input type="date" name="end">
+         <button type="submit" class="myBtn btn btn-primary ">Change range</button>
+        </form>
+    </div>
+</body>
+</html>
